@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="Krishi (Template 10)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/login.png') }}" type="image/x-icon">
+    <title>Smart Agriculture Kenya</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="w-full bg-neutral-100 p-4"> 
+    <nav>
+        <img src="../static/images/logo.png" alt="Brand Logo" class="logo-img">
+        <span class="toggle-menu">&#9776;</span> <!-- Hamburger menu icon -->
+        <span class="close-menu" style="display: none;">&#10005;</span> <!-- Close (cross) icon -->
+        <ul>
+            <li><a href="landing">Home</a></li>
+            <li><a href="#prediction-section">Fertilizer Recomm</a></li>
+            <li><a href="#schedule">Crops Recom</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search..." id="searchInput" onkeyup="searchSuggestions()">
+            <button class="search-button" onclick="performSearch()"><span>&#128269;</span></button>
+            <div id="suggestionsContainer" class="suggestions-container"></div>
+        </div>
+    </nav>              
+</header>
+
+    
+
+    <section class="home-hero">
+        <div class="home-main">
+            <!-- Left side: Heading, Description, and Button -->
+            <div class="home-content">
+                <div class="left-side">
+                    <h1 class="home-header07">Empowering every farmer to be a Catalyst for Change in Kenya</h1>
+                    <p class="home-description">
+                        Smart agriculture practices can help farmers boost productivity, reduce waste, and enhance sustainability.
+                        Our platform offers real-time weather data, crop recommendations, and insights to make informed decisions.
+                    </p>
+        
+                    <!-- Button to continue -->
+                    <button id="features" class="button button-main home-book2">
+                        <img alt="image" src="{{ url_for('static', filename='images/calender.png') }}" class="home-image10" />
+                        <span>Continue</span>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Right side: Weather Video -->
+            <div class="home-video-container">
+                <video autoplay loop muted class="home-weather-video">
+                    <source src="{{ url_for('static', filename='images/video/background video.mp4') }}" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        
+    
+        <!-- Features Section: Horizontally arranged features -->
+        <div id="features" class="home-features">
+            <div class="features-container">
+                <div class="features-section">
+                    <div class="features-heading">
+                        <img alt="image" src="{{ url_for('static', filename='images/trace.png') }}" height="100px" width="220px" class="image" />
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="features-heading">
+                        <img alt="image" src="{{ url_for('static', filename='images/football.png') }}" height="100px" width="220px" class="image" />
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="features-heading">
+                        <img alt="image" src="{{ url_for('static', filename='images/eco.png') }}" height="100px" width="220px" class="image" />
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="features-heading">
+                        <img alt="image" src="{{ url_for('static', filename='images/ada.png') }}" height="100px" width="220px" class="image" />
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="features-heading">
+                        <img alt="image" src="{{ url_for('static', filename='images/acad.png') }}" height="100px" width="220px" class="image" />
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="features-heading">
+                        <img alt="image" src="{{ url_for('static', filename='images/shield.png') }}" height="100px" width="220px" class="image" />
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="features-heading">
+                        <img alt="image" src="{{ url_for('static', filename='images/farmland.png') }}" height="100px" width="220px" class="image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="prediction-section" id="prediction-section">
+        <div id="how-it-works" class="prediction-section6">
+            <div class="prediction-content04">
+                <div class="prediction-header12">
+                    <h2 class="prediction-heading10">Fertilizers improve the growth and productivity of crops.</h2>
+                    <p class="prediction-caption">
+                        Our fertilizer prediction tool analyzes soil conditions, crop type, and environmental factors to recommend the best fertilizers for your farm. Optimize nutrient management to achieve higher yields and healthier crops effortlessly.
+                    </p>
+                </div>
+                <div class="read-more">
+                    <a href="Detail" class="btn-link">
+                        <span class="prediction-text17">
+                            <h3>Check Fertility in your farm. What Fertilizer to use</h3>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <img alt="image" src="{{ url_for('static', filename='images/fertility2.png') }}" class="prediction-image15" />
+        </div>
+        <div id="schedule" class="prediction-section7">
+            <div class="prediction-content05">
+                <div class="prediction-header13">
+                    <h2 class="prediction-heading11">Crop Recommendation for Farmers made easy</h2>
+                    <p class="prediction-caption1">
+                        Leveraging advanced weather analysis and farm-specific data, our system provides tailored crop recommendations. Ensure optimal planting decisions that suit your farm’s unique conditions and upcoming weather patterns.
+                    </p>
+                </div>
+                <div class="read-more">
+                    <span class="prediction-text18">
+                        <h3>
+                            <a href="crops" class="btn-link">Get Recommendations for Crops. Best crops to grow.</a>
+                        </h3>
+                    </span>
+                </div>
+            </div>
+            <img alt="image" src="{{ url_for('static', filename='images/spraying.png') }}" class="prediction-image17" />
+        </div>
+        <div id="yield" class="prediction-section8">
+            <div class="prediction-content06">
+                <div class="prediction-header14">
+                    <h2 class="prediction-heading12">Find out how we can help you.</h2>
+                    <p class="prediction-caption2">
+                        Explore smart farming techniques, modern agricultural tools, and best practices to maximize yield and sustainability. Learn how our platform can guide you every step of the way to grow healthy, thriving crops.
+                    </p>
+                </div>
+                <div class="read-more">
+                    <a href="#" class="btn-link">
+                        <span class="prediction-text18">
+                            <h3>Guide on Growing Crops</h3>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <img alt="image" src="{{ url_for('static', filename='images/smartFarm.png') }}" class="prediction-image18" />
+        </div>
+    </section>
+    
+
+    <section id="home" class="content-section">
+        <div class="home-container">
+            <div data-modal="practices" class="home-modal">
+                <div class="home-practices">
+                    <div class="home-heading">
+                        <span class="home-header">Our Agricultural Practices</span></br>
+                    </div>
+                    <div class="home-grid">
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/greenhouse.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header01">Sustainable Farming</h3>
+                                <p class="home-caption">Explore sustainable practices that help preserve the environment while maximizing crop yields in Kenya.</p>
+                                <i class="fas fa-seedling"></i>
+                                <button class="read-more-btn">Read More</button> <!-- Read More Button -->
+                            </div>
+                        </div>
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/maize.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header02">Irrigation Techniques</h3>
+                                <p class="home-caption">Discover innovative irrigation solutions to tackle water scarcity and enhance productivity in agriculture.</p>
+                                <i class="fas fa-tint"></i>
+                                <button class="read-more-btn">Read More</button> <!-- Read More Button -->
+                            </div>
+                        </div>
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/machinery.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header03">Modern Machinery</h3>
+                                <p class="home-caption">Utilize modern agricultural machinery to improve efficiency and reduce labor costs on farms.</p>
+                                <i class="fas fa-cogs"></i>
+                                <button class="read-more-btn">Read More</button> <!-- Read More Button -->
+                            </div>
+                        </div>
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/spraying.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header04">Crop Protection</h3>
+                                <p class="home-caption">Learn about various crop protection methods to safeguard your produce from pests and diseases.</p>
+                                <i class="fas fa-bug"></i>
+                                <button class="read-more-btn">Read More</button> <!-- Read More Button -->
+                            </div>
+                        </div>
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/fertility2.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header05">Soil Fertility</h3>
+                                <p class="home-caption">Discover techniques for maintaining soil fertility to ensure long-term productivity of your farm.</p>
+                                <i class="fas fa-leaf"></i>
+                                <button class="read-more-btn">Read More</button> <!-- Read More Button -->
+                            </div>
+                        </div>
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/background.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header06">Climate-Smart Agriculture</h3>
+                                <p class="home-caption">Adopt climate-smart techniques to adapt to changing weather patterns and boost farm resilience.</p>
+                                <i class="fas fa-sun"></i>
+                                <button class="read-more-btn">Read More</button> <!-- Read More Button -->
+                            </div>
+                        </div>
+                        <!-- Maize Section -->
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/sky.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header06">Maize Farming Techniques</h3>
+                                <p class="home-caption">Discover innovative ways to increase maize yields with minimal resources and eco-friendly practices.</p>
+                                <i class="fas fa-leaf"></i>
+                                <button class="read-more-btn">Read More</button>
+                            </div>
+                        </div>
+
+                        <!-- Greenhouse Section -->
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/house.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header06">Greenhouse Farming</h3>
+                                <p class="home-caption">Learn how to create and manage greenhouses for year-round crop production in any climate.</p>
+                                <i class="fas fa-seedling"></i>
+                                <button class="read-more-btn">Read More</button>
+                            </div>
+                        </div>
+
+                        <!-- General Agriculture Section -->
+                        <div class="home-section" style="background-image: url('{{ url_for('static', filename='images/innovative.png') }}');">
+                            <div class="overlay">
+                                <h3 class="home-header06">Innovative Agriculture</h3>
+                                <p class="home-caption">Explore the latest trends in agriculture, from precision farming to sustainable practices.</p>
+                                <i class="fas fa-tractor"></i>
+                                <button class="read-more-btn">Read More</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="home-schedule">
+        <div class="home-content07">
+            <div class="home-header15">
+                <h1 class="section-heading">Get in Touch and Stay Connected</h1>
+                <p class="section-description">
+                    We’d love to hear from you! Use the form below to send us a message, or connect with us on our social media platforms to stay updated.
+                </p>
+            </div>
+            <div class="contact-container">
+                <div class="form-container">
+                    <div class="home-header15">
+                        <h2 class="home-heading13">Contact Us</h2>
+                    </div>
+                    <form class="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="social-container">
+                    <div class="home-header15">
+                        <h2 class="home-heading13">Follow Us</h2>
+                    </div>
+                    <p class="social-description">
+                        Follow us on these platforms to stay updated with our latest news, events, and more.
+                    </p>
+                    <div class="home-social">
+                        <div class="social">
+                            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <span>LinkedIn</span>
+                        </div>
+                        <div class="social">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <span>Instagram</span>
+                        </div>
+                        <div class="social">
+                            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <span>Twitter</span>
+                        </div>
+                        <div class="social">
+                            <a href="https://wa.me/yourwhatsapplink" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <span>WhatsApp</span>
+                        </div>
+                        <div class="social">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <span>Facebook</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="home-footer">
+        <div class="home-left1">
+            <div class="home-socials">
+                <a href="https://linkedin.com/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://wa.me/yourwhatsapplink" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="home-legal">
+                <span>© 2024 Agro Care. All Rights Reserved.</span>
+                <a href="#" class="legal-link">Privacy Policy</a>
+                <a href="#" class="legal-link">Terms of Use</a>
+            </div>
+        </div>
+        <div class="home-right1">
+            <div class="footer-column">
+                <h3>Menu</h3>
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Services</a>
+                <a href="#" class="footer-link">Blog</a>
+                <a href="#" class="footer-link">Support</a>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <a href="#" class="footer-link">Soil Test Results</a>
+                <a href="#" class="footer-link">Dashboard</a>
+                <a href="#" class="footer-link">Feedback</a>
+                <a href="#" class="footer-link">Recruitments</a>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>Ministry of Agriculture, Kenya</p>
+                <a href="mailto:contact@template.new" class="footer-link">deey440@gmail.com</a>
+                <a href="tel:(+254) 112-650257" class="footer-link">(+254) 112-650257</a>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Stay updated with the latest news and updates from Agro Care.</p>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter your email" class="footer-input" required>
+                    <button type="submit" class="footer-button">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-column">
+                <h3>Location</h3>
+                <p>Ministry of Agriculture Headquarters</p>
+                <p>Nairobi, Kenya</p>
+            </div>
+        </div>
+    </div> 
+    
+    
+     <script src="{{ url_for('static', filename='js/landing.js') }}" defer></script>
+</body>
+</html>

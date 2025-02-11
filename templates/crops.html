@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ url_for('static', filename='images/login.png') }}" type="image/x-icon">
+    <title>Crops Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/crops.css') }}"/>
+  </head>
+  <body>
+    <header class="w-full bg-neutral-100 p-4"> 
+      <nav>
+          <img src="../static/images/logo.png" alt="Brand Logo" class="logo-img">
+          <span class="toggle-menu">&#9776;</span> <!-- Hamburger menu icon -->
+          <span class="close-menu" style="display: none;">&#10005;</span> <!-- Close (cross) icon -->
+          <ul>
+              <li><a href="landing">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>              
+  </header> 
+    <div class="container my-3 mt-3">
+        <h1 class="text-success">Crop Recommendation System <span class="text-success">🌱</span></h1>
+        <form action="/crops" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="Nitrogen">Nitrogen</label>
+                    {{ form.Nitrogen(class="form-control", placeholder="Enter Nitrogen") }}
+                </div>
+                <div class="col-md-4">
+                    <label for="Phosphorus">Phosphorus</label>
+                    {{ form.Phosphorus(class="form-control", placeholder="Enter Phosphorus") }}
+                </div>
+                <div class="col-md-4">
+                    <label for="Potassium">Potassium</label>
+                    {{ form.Potassium(class="form-control", placeholder="Enter Potassium") }}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <label for="Temperature">Temperature</label>
+                    {{ form.Temperature(class="form-control", placeholder="Enter Temperature in °C") }}
+                </div>
+                <div class="col-md-4">
+                    <label for="Humidity">Humidity</label>
+                    {{ form.Humidity(class="form-control", placeholder="Enter Humidity in %") }}
+                </div>
+                <div class="col-md-4">
+                    <label for="Ph">pH</label>
+                    {{ form.Ph(class="form-control", placeholder="Enter pH value") }}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <label for="Rainfall">Rainfall</label>
+                    {{ form.Rainfall(class="form-control", placeholder="Enter Rainfall in mm") }}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Get Recommendation</button>
+                </div>
+            </div>
+        </form>
+
+        {% if result %}
+        <div class="card bg-dark">
+            <img src="{{ url_for('static', filename='images/spraying.png') }}" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Recommended Crop for cultivation is:</h5>
+                <p class="card-text">{{ result }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <footer>
+      <p>&copy; 2024 My Webcrumbs Plugin. All Rights Reserved.</p>
+  </footer>
+  <script>
+    // Get the elements
+     const toggleMenu = document.querySelector('.toggle-menu');
+     const closeMenu = document.querySelector('.close-menu');
+     const navLinks = document.querySelector('nav ul');
+ 
+     // Toggle the menu and icons
+     toggleMenu.addEventListener('click', () => {
+         navLinks.classList.add('active'); // Show the menu
+         toggleMenu.style.display = 'none'; // Hide the hamburger icon
+         closeMenu.style.display = 'block'; // Show the cross icon
+     });
+ 
+     closeMenu.addEventListener('click', () => {
+         navLinks.classList.remove('active'); // Hide the menu
+         closeMenu.style.display = 'none'; // Hide the cross icon
+         toggleMenu.style.display = 'block'; // Show the hamburger icon
+     });
+   </script>
+  
+  </body>
+</html>

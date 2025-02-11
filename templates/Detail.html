@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/login.png') }}" type="image/x-icon">
+    <title>Fertlizer Recommendation</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="w-full bg-neutral-100 p-4"> 
+      <nav>
+          <img src="../static/images/logo.png" alt="Brand Logo" class="logo-img">
+          <span class="toggle-menu">&#9776;</span> <!-- Hamburger menu icon -->
+          <span class="close-menu" style="display: none;">&#10005;</span> <!-- Close (cross) icon -->
+          <ul>
+            <li><a href="{{ url_for('landing') }}">Home</a></li>
+            <li><a href="{{ url_for('Detail') }}">Fertlizer Home</a></li>
+            <li><a href="{{ url_for('Model1') }}">Model</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+          </ul>
+          <!-- Search Bar -->
+          <div class="search-bar">
+              <input type="text" class="search-input" placeholder="Search..." id="searchInput" onkeyup="searchSuggestions()">
+              <button class="search-button" onclick="performSearch()"><span>&#128269;</span></button>
+              <div id="suggestionsContainer" class="suggestions-container"></div>
+          </div>
+      </nav>              
+    </header>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Fertilizer Recommendation System</h3>
+        <p>Fertilizer recommendation systems can help farmers make more informed decisions about nutrient management, increase crop yields, reduce production costs, and minimize environmental harm. These systems are a part of precision agriculture, which leverages technology to optimize farming practices and improve overall agricultural sustainability..</p>
+        <a href="{{ url_for('Model1') }}" class="btn">Get Recommendation</a>
+    </div>
+</section>
+
+<!-- home section ends -->
+
+<!-- category section start -->
+
+<section class="popular" id="popular">
+
+    <h1 class="heading">OurModel</h1>
+
+    <div class="box-container">
+
+        <div class="box1">
+            <img src="{{ url_for('static', filename='images/fertilizer.jpg') }}" alt="">
+            <h3>Fertilizer model</h3>   
+            <a href="{{ url_for('Model1') }}" class="btn product_button">visit</a>
+        </div>
+       
+    </div>
+
+</section>
+
+<section class="fertilizer-home" id="home">
+  <!-- Left Section -->
+  <div class="fertilizer-left">
+    <h1 class="fertilizer-heading">Fertilizer Recommendation System</h1>
+    <div class="fertilizer-content">
+      <p>
+        The Fertilizer Recommendation System is a smart agricultural tool
+        designed to help farmers make informed decisions about the types and
+        quantities of fertilizers to use on their crops. By analyzing soil
+        data, crop types, and local weather conditions, this system provides
+        personalized fertilizer recommendations to optimize crop yield and
+        reduce input costs.
+      </p>
+
+      <div class="fertilizer-info">
+        <h3>Key points used in projects are mentioned below:</h3>
+        <h1>N (Nitrogen)</h1>
+        <p>
+          Nitrogen is crucial for plant growth, food processing, and chlorophyll creation.
+        </p>
+      </div>
+
+      <div class="fertilizer-info">
+        <h1>P (Phosphorus)</h1>
+        <p>
+          Phosphorus helps store and transfer energy in plants for growth and reproduction.
+        </p>
+      </div>
+
+      <div class="fertilizer-info">
+        <h1>K (Potassium)</h1>
+        <p>
+          Potassium is essential for plant development and overall health.
+        </p>
+      </div>
+
+      <div class="fertilizer-info">
+        <h1>Temperature</h1>
+        <p>
+          High temperatures impact photosynthesis and respiration in plants.
+        </p>
+      </div>
+
+      <div class="fertilizer-info">
+        <h1>Humidity</h1>
+        <p>
+          High humidity can cause mold, bacterial growth, and invite pests.
+        </p>
+      </div>
+
+      <div class="fertilizer-info">
+        <h1>Moisture</h1>
+        <p>
+          Soil moisture affects nutrient availability and crop health.
+        </p>
+      </div>
+
+      <div class="fertilizer-info">
+        <h1>Soil Type</h1>
+        <p>
+          Different soil types impact crop growth—loamy soil is often ideal.
+        </p>
+      </div>
+
+      <div class="fertilizer-info">
+        <h1>Label</h1>
+        <p>
+          The system identifies 22 different fertilizer types based on analysis.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Section -->
+  <div class="fertilizer-right">
+    <div class="charts">
+      <img src="{{ url_for('static', filename='images/o1.png') }}" alt="Chart 1">
+      <img src="{{ url_for('static', filename='images/o2.png') }}" alt="Chart 2">
+      <img src="{{ url_for('static', filename='images/o3.png') }}" alt="Chart 3">
+      <img src="{{ url_for('static', filename='images/o4.png') }}" alt="Chart 4">
+    </div>
+  </div>
+</section>
+
+<section class="home-footer">
+  <div class="home-left1">
+      <div class="home-socials">
+          <a href="https://linkedin.com/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/yourwhatsapplink" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="home-legal">
+          <span>© 2024 Agro Care. All Rights Reserved.</span>
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <a href="#" class="legal-link">Terms of Use</a>
+      </div>
+  </div>
+  <div class="home-right1">
+      <div class="footer-column">
+          <h3>Menu</h3>
+          <a href="#" class="footer-link">Home</a>
+          <a href="#" class="footer-link">About</a>
+          <a href="#" class="footer-link">Services</a>
+          <a href="#" class="footer-link">Blog</a>
+          <a href="#" class="footer-link">Support</a>
+      </div>
+      <div class="footer-column">
+          <h3>Resources</h3>
+          <a href="#" class="footer-link">Soil Test Results</a>
+          <a href="#" class="footer-link">Dashboard</a>
+          <a href="#" class="footer-link">Feedback</a>
+          <a href="#" class="footer-link">Recruitments</a>
+      </div>
+      <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Ministry of Agriculture, Kenya</p>
+          <a href="mailto:contact@template.new" class="footer-link">deey440@gmail.com</a>
+          <a href="tel:(+254) 112-650257" class="footer-link">(+254) 112-650257</a>
+      </div>
+      <div class="footer-column">
+          <h3>Newsletter</h3>
+          <p>Stay updated with the latest news and updates from Agro Care.</p>
+          <form action="#" method="post">
+              <input type="email" placeholder="Enter your email" class="footer-input" required>
+              <button type="submit" class="footer-button">Subscribe</button>
+          </form>
+      </div>
+      <div class="footer-column">
+          <h3>Location</h3>
+          <p>Ministry of Agriculture Headquarters</p>
+          <p>Nairobi, Kenya</p>
+      </div>
+  </div>
+</section> 
+
+
+<script src="{{ url_for('static', filename='js/landing.js') }}" defer></script>
+</body>
+</html>
