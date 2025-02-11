@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/spraying.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Header */
+header {
+    background: linear-gradient(90deg, #8B4513, #0a6e24);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo-img {
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Toggle Menu (Mobile view) */
+nav .toggle-menu {
+    display: none;
+}
+
+/* Main Content */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2d6a4f;
+  font-size: 2.5em;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+/* Form */
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  color: #000;
+  font-size: 16px; /* Set consistent font size for input fields */
+}
+
+form button {
+  grid-column: span 4;
+  background-color: rgba(139, 69, 19, 0.9);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: rgba(10, 110, 36, 0.9);
+}
+
+/* Result Card */
+.card {
+  background-color: #343a40;
+  color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card img {
+  max-width: 15%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 14px; /* Increased font size for better readability */
+}
+/* Media Queries for Small Screens */
+@media screen and (max-width: 768px) {
+  /* General Body */
+  body {
+    font-size: 14px;
+  }
+
+  /* Header */
+  header {
+    padding: 10px;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Navigation Links */
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+
+  nav ul.active {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+
+  nav ul li a:hover {
+    background-color: #FFD700;
+    color: #000;
+  }
+
+  /* Toggle Menu */
+  nav .toggle-menu {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Close Menu */
+  nav .close-menu {
+    display: none;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+  }
+
+  nav ul.active + .close-menu {
+    display: block;
+  }
+
+  /* Main Content */
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  /* Form */
+  form {
+    grid-template-columns: 1fr; /* Ensure each input takes a full row on small screens */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+  }
+
+  form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    color: #000;
+    font-size: 16px;
+  }
+
+  form button {
+    grid-column: span 1; /* Keep the button in one column */
+    padding: 12px;
+  }
+
+  /* Result Card */
+  .card {
+    margin-top: 10px;
+    padding: 15px;
+  }
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Media Queries for Larger Screens */
+@media screen and (min-width: 769px) {
+  /* Form */
+  form {
+    grid-template-columns: repeat(3, 1fr); /* Display 3 columns on larger screens */
+  }
+
+  form button {
+    grid-column: span 3;
+    padding: 12px;
+  }
+
+  /* Result Card */
+  .card {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+}

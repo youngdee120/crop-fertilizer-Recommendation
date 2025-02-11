@@ -1,0 +1,1198 @@
+/* Reset margins and padding for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+/* Header and Navbar CSS */
+header {
+    background: linear-gradient(90deg, #8B4513, #0a6e24);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's always on top of other content */
+}
+
+.logo-img {
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; /* Ensure padding for left and right */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Toggle Menu (Mobile view) */
+nav .toggle-menu {
+    display: none;
+}
+/* Styling for the search bar */
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #eeff00;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-button:hover {
+    background-color: #00d5ff;
+}
+
+/* Suggestions Container */
+.suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home Hero Section */
+.home-hero {
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.8), rgba(46, 204, 113, 0.8)); /* Gradient background */
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.home-content {
+    flex: 1;
+    text-align: left;
+}
+
+/* Left side content */
+.left-side {
+    max-width: 600px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.home-header07 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.home-description {
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.button-main {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-main:hover {
+    background-color: #0a6e24;
+    transform: translateY(-3px);
+}
+
+.button-main .home-image10 {
+    margin-right: 10px;
+    width: 25px;
+    height: auto;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-video-container {
+    flex: 1;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-weather-video {
+    width: 120%;
+    height: auto;
+    max-width: 999px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+/* Button Styling */
+.button-main {
+    background-color: #8B4513;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.button-main:hover {
+    background-color: #45a049;
+}
+
+.home-image10 {
+    margin-right: 10px;
+    width: 25px;
+    height: auto;
+}
+/* Features Section */
+.home-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Adjust spacing as needed */
+    padding: 20px 0;
+    background-color: white; /* White background for the section */
+    position: relative;
+    width: 100%; /* Ensure it spans the full width of the screen */
+}
+
+/* Features Container */
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* Reduced space between images */
+    flex-wrap: wrap; /* Wrap to handle smaller screens */
+}
+
+/* Individual Feature Sections */
+.features-section {
+    flex: 1; /* Make all sections equal width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px; /* Fixed width for consistency */
+    height: 150px; /* Fixed height for all images */
+    background-color: white;
+    border: 1px solid #ddd; /* Optional border for a clean look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    border-radius: 5px; /* Optional rounded edges */
+    overflow: hidden; /* Ensure images don't overflow their containers */
+}
+
+/* Images */
+.features-heading img {
+    width: 100%; /* Stretch to fit the container */
+    height: 100%; /* Ensure consistent height */
+    object-fit: cover; /* Crop to fill the container while maintaining aspect ratio */
+}
+
+
+
+
+
+
+
+
+
+
+/* CSS for the "Fertilizer and Crop Recommendation" section */
+.prediction-section {
+    padding: 50px 0;
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.8), rgba(46, 204, 113, 0.8));
+}
+.prediction-section6, .prediction-section7, .prediction-section8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-left: 20px; /* Push content from the left edge */
+    gap: 20px; /* Add spacing between elements */
+}
+
+.prediction-section6 .prediction-content04,
+.prediction-section7 .prediction-content05,
+.prediction-section8 .prediction-content06 {
+    flex: 1;
+    padding: 20px;
+    padding-left: 30px; /* Extra padding for spacing from the left */
+}
+
+.prediction-image15, .prediction-image17, .prediction-image18 {
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px; /* Add spacing from the right for images on the right */
+}
+
+.prediction-header12, .prediction-header13, .prediction-header14 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.prediction-heading10, .prediction-heading11, .prediction-heading12 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.read-more {
+    margin-top: 20px;
+}
+
+.read-more a {
+    color: white;
+    background-color: #8B4513;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.read-more a:hover {
+    background-color: green;
+}
+
+.prediction-text17, .prediction-text18 {
+    font-size: 16px;
+}
+
+.prediction-section7 {
+    flex-direction: row-reverse; /* For parts where the image is on the left */
+}
+
+.prediction-section8 {
+    flex-direction: row; /* For parts where the image is on the right */
+    padding-right: 30px; /* Add padding for consistent spacing */
+}
+
+.btn-link {
+    text-decoration: none;
+    color: white;
+    background-color: #8B4513;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+/* General Styles */
+.content-section{
+    /* background: linear-gradient(to right, rgba(52, 152, 219, 0.8), rgba(46, 204, 113, 0.8));  Gradient background */
+    background: #fff;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;
+}
+
+.home-container {
+    text-align: center; /* Center text horizontally */
+}
+
+.home-header {
+    font-size: 48px; /* Large font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #2c3e50; /* Dark color for better readability */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 2px; /* Space between the letters */
+    margin: 0; /* Remove any default margin */
+}
+/* Section styling with background images */
+.home-section, .home-section1, .home-section2, .home-section3, .home-section4, .home-section5 {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(139, 69, 19, 0.7), rgba(10, 110, 36, 0.7));
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px; /* Add padding to the text inside the overlay */
+}
+
+.home-section:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styling for the text and icon inside the overlay */
+.overlay h3 {
+    font-size: 36px; /* Increase font size */
+    margin-bottom: 10px;
+    font-weight: bold; /* Make the header bold */
+}
+
+.overlay p {
+    font-size: 18px; /* Increase font size */
+    margin-bottom: 15px;
+    line-height: 1.5; /* Add space between lines for readability */
+}
+
+.overlay i {
+    font-size: 50px; /* Increase icon size */
+    color: white;
+    margin-top: 10px; /* Add space between text and icon */
+}
+/* Style for the Read More button */
+.read-more-btn {
+    padding: 10px 20px; /* Add padding around the button text */
+    font-size: 16px; /* Set the font size */
+    background-color: #FFD700; /* Gold background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px; /* Add some space between the text and the button */
+}
+
+/* Hover effect for the Read More button */
+.read-more-btn:hover {
+    background-color: #FFA500; /* Darker gold on hover */
+    transform: scale(1.1); /* Slightly increase the size */
+}
+
+
+
+
+
+/* Overall section background */
+#contact {
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.8), rgba(46, 204, 113, 0.8));
+    padding: 40px 20px; /* Add padding around the section */
+}
+
+/* Contact container styling */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Form and social container styling */
+.form-container,
+.social-container {
+    flex: 1; /* Take equal space */
+    max-width: 45%; /* Restrict max width for each */
+    background-color: #f9f9f9; /* Light background for individual parts */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and text styles */
+.home-header15 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.social-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contact form styles */
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #00d9ff;
+    color: #000;
+}
+
+/* Social container and icons styles */
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home-social {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social a {
+    font-size: 24px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #007bff;
+}
+
+.social span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
+/* footer css */
+.home-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000; /* Dark background */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.home-left1 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.home-right1 {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 600px;
+}
+
+.home-socials {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #1abc9c; /* Highlight color */
+}
+
+.home-legal {
+    margin-top: 10px;
+}
+
+.legal-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.legal-link:hover {
+    text-decoration: underline;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-link:hover {
+    color: #1abc9c; /* Highlight color */
+}
+
+p {
+    margin: 5px 0;
+}
+
+.footer-input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-button {
+    padding: 10px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: #16a085;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    /* General Body */
+    body {
+        font-size: 14px;
+    }
+
+    /* Header */
+    header {
+        padding: 10px;
+        position: fixed; /* Make the header fixed */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Make sure the header stays on top */
+        background-color: #fff; /* Ensure the navbar has a background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visibility */
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding: 0 10px;
+    }
+
+    /* Navigation Links */
+    nav ul {
+        display: none; /* Initially hide the menu */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%; /* Full height of the screen */
+        width: 250px; /* Set the width of the menu */
+        background-color: rgba(0, 0, 0, 0.8); /* Dark background for the menu */
+        flex-direction: column;
+        padding: 20px;
+        margin: 0;
+        list-style: none;
+        z-index: 1; /* Ensure menu content is below the close icon */
+        transition: transform 0.3s ease;
+        transform: translateX(100%); /* Initially position the menu off-screen */
+    }
+
+    nav ul.active {
+        display: flex;
+        transform: translateX(0); /* Move the menu into view */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space out the menu items */
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 12px;
+        color: #fff;
+        text-decoration: none;
+        display: block; /* Make the link block-level for easier clicking */
+    }
+
+    nav ul li a:hover {
+        background-color: #FFD700; /* Highlight links on hover */
+        color: #000;
+    }
+
+    /* Toggle Menu (Hamburger Icon) */
+    nav .toggle-menu {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        padding: 0 30px; /* Add padding to prevent it from being squeezed */
+    }
+
+    /* Close Menu (X Icon) */
+    nav .close-menu {
+        display: none; /* Hide the close icon initially */
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 20px; /* Position it at the top */
+        right: 35px; /* Position it on the right */
+        z-index: 2; /* Ensure the close icon is on top of the menu */
+    }
+    /* Home Hero Section */
+    .home-hero {
+        padding: 40px 0; /* Reduced padding for smaller screens */
+    }
+    .home-main {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .home-content {
+        text-align: center; /* Center text on smaller screens */
+        width: 100%;
+    }
+
+    .left-side {
+        padding-right: 0; /* Remove padding on small screens */
+        text-align: center;
+    }
+
+    .home-header07 {
+        font-size: 2.5rem; /* Reduced font size */
+    }
+
+    .home-description {
+        font-size: 1rem; /* Smaller description text */
+    }
+
+    .button-main {
+        padding: 10px 20px;
+        font-size: 1rem; /* Smaller button text */
+    }
+
+    .home-video-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .home-weather-video {
+        width: 100%; /* Full width video on smaller screens */
+    }
+
+    /* Features Section: Adjust layout for small screens */
+    .features-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px; /* Reduced space between images */
+        flex-wrap: wrap; /* Ensure images wrap correctly on small screens */
+    }
+
+    .features-section {
+        flex: 1; /* Make all sections equal width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 30%; /* Reduced max width for smaller images */
+        height: 80px; /* Adjust height for smaller images */
+        background-color: white;
+        border: 1px solid #ddd; /* Optional border for a clean look */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        border-radius: 5px; /* Optional rounded edges */
+        overflow: hidden; /* Ensure images don't overflow their containers */
+    }
+
+    /* Images */
+    .features-heading img {
+        width: 120%; /* Stretch to fit the container */
+        height: 100%; /* Ensure consistent height */
+        object-fit: cover; /* Crop to fill the container while maintaining aspect ratio */
+    }
+
+    /* Adjust layout for smaller screen */
+    .features-section:nth-child(even), .features-section:nth-child(odd) {
+        max-width: 45%; /* Ensure two images per row */
+    }
+    .home-grid {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+
+    /* Section styling with background images */
+    .home-section, .home-section1, .home-section2, .home-section3, .home-section4, .home-section5 {
+        height: 200px; /* Smaller height for sections on small screens */
+    }
+
+    /* Overlay text and button adjustments */
+    .overlay h3 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .read-more-btn {
+        font-size: 14px; /* Smaller button text */
+    }
+
+    /* Adjust layout for images inside sections */
+    .home-section6, .home-section7, .home-section8 {
+        flex-direction: column; /* Stack elements in these sections */
+    }
+
+    .home-image15, .home-image17, .home-image18 {
+        max-width: 100%; /* Ensure images fill the available space */
+    }
+
+    /* Additional adjustments for smaller screens */
+    .prediction-section {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .prediction-section6, .prediction-section7, .prediction-section8 {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .prediction-image15, .prediction-image17, .prediction-image18 {
+        max-width: 100%; /* Ensure images fill the available space */
+        margin: 0 auto; /* Center images */
+    }
+
+    .prediction-header12, .prediction-header13, .prediction-header14 {
+        font-size: 1.5rem; /* Smaller font size for headers */
+    }
+
+    .prediction-heading10, .prediction-heading11, .prediction-heading12 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    .prediction-text17, .prediction-text18 {
+        font-size: 14px; /* Smaller text size */
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium devices */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .form-container,
+    .social-container {
+        max-width: 100%; /* Make containers full width */
+    }
+}
+
+/* For small devices like phones */
+@media (max-width: 576px) {
+    .section-heading {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .section-description {
+        font-size: 14px; /* Adjust description font size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 13px; /* Adjust form input size */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .contact-form button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    .social a {
+        font-size: 20px; /* Reduce icon size */
+    }
+
+    .social span {
+        font-size: 14px; /* Adjust text font size */
+    }
+}
+
+/* For extra small devices like very narrow screens */
+@media (max-width: 375px) {
+    .home-header15 {
+        font-size: 18px; /* Adjust header font size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px; /* Further adjust form input size */
+        padding: 6px; /* Further reduce padding */
+    }
+
+    .contact-form button {
+        font-size: 12px; /* Smaller button text */
+        padding: 6px 12px; /* Smaller button padding */
+    }
+
+    .social a {
+        font-size: 18px; /* Smaller social icon size */
+    }
+
+    .social span {
+        font-size: 12px; /* Smaller social text size */
+    }
+}
+/* Media Query for small devices (mobile) */
+@media (max-width: 767px) {
+    .home-footer {
+        padding: 15px;
+    }
+
+    .home-left1,
+    .home-right1 {
+        flex: 1 1 100%; /* Stacks the columns */
+        min-width: 0;
+    }
+
+    .home-socials {
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .social-icon {
+        font-size: 18px;
+    }
+
+    .home-legal {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%; /* Stacks columns in a single column */
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer-column h3 {
+        font-size: 16px;
+    }
+
+    .footer-input {
+        width: 90%;
+    }
+
+    .footer-button {
+        width: 90%;
+    }
+
+    .legal-link {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+/* Media Query for medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .home-footer {
+        padding: 20px;
+    }
+
+    .home-left1,
+    .home-right1 {
+        flex: 1 1 45%; /* Reduces the width of the columns */
+        min-width: 0;
+    }
+
+    .home-socials {
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 45%; /* Adjust columns for medium screen */
+        margin: 10px;
+    }
+
+    .footer-column h3 {
+        font-size: 16px;
+    }
+
+    .footer-input {
+        width: 85%;
+    }
+
+    .footer-button {
+        width: 85%;
+    }
+}
+
+/* Media Query for large screens */
+@media (min-width: 1024px) {
+    .home-footer {
+        padding: 20px 30px;
+    }
+
+    .home-left1 {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .home-right1 {
+        display: flex;
+        flex: 2;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        min-width: 600px;
+    }
+
+    .footer-column {
+        flex: 1;
+        min-width: 200px;
+        margin: 10px;
+    }
+
+    .footer-input {
+        width: 80%;
+    }
+
+    .footer-button {
+        width: 80%;
+    }
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .search-bar {
+        width: 80%;
+    }
+
+    .search-input {
+        font-size: 16px;
+    }
+
+    .home-header {
+        font-size: 20px;
+    }
+
+    .home-caption {
+        font-size: 14px;
+    }
+
+    .home-section {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-bar {
+        width: 90%;
+    }
+
+    .search-input {
+        font-size: 18px;
+    }
+
+    .home-header {
+        font-size: 18px;
+    }
+
+    .home-caption {
+        font-size: 12px;
+    }
+}
